@@ -1,0 +1,596 @@
+<!DOCTYPE html><html lang="en" class="h-full antialiased"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta name="mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-capable" content="yes"><meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"><meta name="theme-color" content="#000000"><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script type="text/javascript" async="" src="https://snap.licdn.com/li.lms-analytics/insight.min.js"></script><script async="" src="//static.ads-twitter.com/uwt.js"></script><script src="https://connect.facebook.net/signals/config/957053745983983?v=2.9.191&amp;r=stable&amp;domain=www.turingpost.com&amp;hme=ae6b81567baef13f3d085d995659a5ae4a9de556ad2f6e24bef863fd4ce78d6a&amp;ex_m=72%2C126%2C111%2C115%2C63%2C5%2C104%2C71%2C17%2C100%2C92%2C52%2C56%2C180%2C183%2C195%2C191%2C192%2C194%2C30%2C105%2C54%2C79%2C193%2C175%2C178%2C188%2C189%2C196%2C137%2C42%2C201%2C198%2C199%2C35%2C150%2C16%2C51%2C205%2C204%2C139%2C19%2C41%2C1%2C44%2C67%2C68%2C69%2C73%2C96%2C18%2C15%2C99%2C95%2C94%2C112%2C53%2C114%2C40%2C113%2C31%2C97%2C27%2C176%2C179%2C147%2C12%2C13%2C14%2C7%2C8%2C26%2C23%2C24%2C59%2C64%2C66%2C77%2C55%2C106%2C28%2C78%2C10%2C9%2C82%2C49%2C22%2C108%2C107%2C109%2C101%2C11%2C21%2C3%2C39%2C76%2C20%2C159%2C88%2C133%2C29%2C75%2C0%2C98%2C58%2C86%2C34%2C84%2C85%2C91%2C48%2C47%2C90%2C38%2C6%2C93%2C83%2C45%2C33%2C36%2C89%2C4%2C87%2C246%2C173%2C124%2C162%2C155%2C2%2C37%2C65%2C43%2C110%2C46%2C81%2C70%2C116%2C62%2C61%2C32%2C102%2C60%2C57%2C50%2C80%2C74%2C25%2C103%2C117" async=""></script><script async="" src="https://connect.facebook.net/en_US/fbevents.js"></script><script async="" src="https://www.googletagmanager.com/gtm.js?id=GTM-P8J55JDB"></script><script>window.__AppGlobals__={"SENTRY_CLIENT_DSN":"https://35c3cc890abe9dbb51e6e513fcd6bbca@o922922.ingest.us.sentry.io/4507170453979136","SENTRY_ENV":"production","SENTRY_RELEASE":"78862e849886d95a679fe380e32c466c9db71095","STRIPE_PUBLISHABLE_KEY":"pk_live_51IekcQKHPFAlBzyyGNBguT5BEI7NEBqrTxJhsYN1FI1lQb9iWxU5U2OXfi744NEMx5p7EDXh08YXrudrZkkG9bGc00ZCrkXrxL","VAPID_PUBLIC_KEY":"BEhdtfPr1iefl9Jd16511ML4L5eC4dp4exGTAqE95rZEgjRPqc-k1FymD_b-e7XaC5g43hejZ0y_VGJq72zncjY","VITE_HUMAN_ENABLED":"true","VITE_HUMAN_URL":"//client.px-cloud.net/PXeBumDLwe/main.min.js","VITE_ADNETWORK_PIXELJS_URL":"https://beehiiv-adnetwork-production.s3.amazonaws.com/pixel-js.js"};</script><script>
+window.addEventListener("beforeinstallprompt", (e) => {
+  e.preventDefault();
+  window.__DeferredPrompt__ = e;
+});
+          </script><link rel="webmanifest" href="/manifest.webmanifest"><title>Topic 27: What are Chain-of-Agents and Chain-of-RAG?</title><meta content="machine learning, artificial intelligence, technology" name="keywords"><meta content="🔳 Turing Post" name="author"><meta content="We explore Google's and Microsoft's advancements that implement &quot;chain&quot; approaches for long context and multi-hop reasoning" name="description"><meta content="website" property="og:type"><meta content="https://www.turingpost.com/p/coa-and-co-rag" property="og:url"><meta content="Topic 27: What are Chain-of-Agents and Chain-of-RAG?" property="og:title"><meta content="We explore Google's and Microsoft's advancements that implement &quot;chain&quot; approaches for long context and multi-hop reasoning" property="og:description"><meta content="Turing Post" property="og:site_name"><meta content="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c5a76334-a8b1-4b03-8ed7-9c01dacb9ccd/CoACoRAG.png?t=1739382496" property="og:image"><meta content="1200" property="og:image:width"><meta content="630" property="og:image:height"><meta content="We explore Google's and Microsoft's advancements that implement &quot;chain&quot; approaches for long context and multi-hop reasoning" property="og:image:alt"><meta content="https://www.turingpost.com/p/coa-and-co-rag" name="twitter:url"><meta content="Topic 27: What are Chain-of-Agents and Chain-of-RAG?" name="twitter:title"><meta content="We explore Google's and Microsoft's advancements that implement &quot;chain&quot; approaches for long context and multi-step reasoning" name="twitter:description"><meta content="https://beehiiv-images-production.s3.amazonaws.com/uploads/asset/file/c5a76334-a8b1-4b03-8ed7-9c01dacb9ccd/CoACoRAG.png?t=1739382496" name="twitter:image"><meta content="summary_large_image" name="twitter:card"><meta content="1932054120322754" name="fb:app_id"><link href="https://www.turingpost.com/p/coa-and-co-rag" rel="canonical"><link as="image" href="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/c0879691-e34f-4a23-8b4b-b2d9c313d91d/thumb_substack.TP-l.png" rel="icon"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&amp;display=swap" rel="stylesheet"><link as="style" href="https://fonts.googleapis.com/css2?family=Space+Grotesk&amp;display=swap" rel="preload"><link href="https://rss.beehiiv.com/feeds/UJIoBuf5BX.xml" rel="alternate" title="Turing Post RSS Feed" type="application/rss+xml"><script type="application/ld+json">{}</script><style>:root {
+  --wt-primary-color: #696969;
+  --wt-text-on-primary-color: #FFFFFF;
+
+  --wt-secondary-color: #F9FAFB;
+  --wt-text-on-secondary-color: #030712;
+
+  --wt-tertiary-color: #FFFFFF;
+  --wt-text-on-tertiary-color: #222222;
+
+  --wt-background-color: #FFFFFF;
+  --wt-text-on-background-color: #222222;
+
+  --wt-subscribe-background-color: #FFFFFF;
+  --wt-text-on-subscribe-background-color: #222222;
+
+  --wt-header-font: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --wt-body-font: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --wt-button-font: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --wt-border-radius: 8px
+}
+
+.bg-wt-primary { background-color: var(--wt-primary-color); }
+.text-wt-primary { color: var(--wt-primary-color); }
+.border-wt-primary { border-color: var(--wt-primary-color); }
+
+.bg-wt-text-on-primary { background-color: var(--wt-text-on-primary-color); }
+.text-wt-text-on-primary { color: var(--wt-text-on-primary-color); }
+.border-wt-text-on-primary { border-color: var(--wt-text-on-primary-color); }
+
+.bg-wt-secondary { background-color: var(--wt-secondary-color); }
+.text-wt-secondary { color: var(--wt-secondary-color); }
+.border-wt-secondary { border-color: var(--wt-secondary-color); }
+
+.bg-wt-text-on-secondary { background-color: var(--wt-text-on-secondary-color); }
+.text-wt-text-on-secondary { color: var(--wt-text-on-secondary-color); }
+.border-wt-text-on-secondary { border-color: var(--wt-text-on-secondary-color); }
+
+.bg-wt-tertiary { background-color: var(--wt-tertiary-color); }
+.text-wt-tertiary { color: var(--wt-tertiary-color); }
+.border-wt-tertiary { border-color: var(--wt-tertiary-color); }
+
+.bg-wt-text-on-tertiary { background-color: var(--wt-text-on-tertiary-color); }
+.text-wt-text-on-tertiary { color: var(--wt-text-on-tertiary-color); }
+.border-wt-text-on-tertiary { border-color: var(--wt-text-on-tertiary-color); }
+
+.bg-wt-background { background-color: var(--wt-background-color); }
+.text-wt-background { color: var(--wt-background-color); }
+.border-wt-background { border-color: var(--wt-background-color); }
+
+.bg-wt-text-on-background { background-color: var(--wt-text-on-background-color); }
+.text-wt-text-on-background { color: var(--wt-text-on-background-color); }
+.border-wt-text-on-background { border-color: var(--wt-text-on-background-color); }
+
+.bg-wt-subscribe-background { background-color: var(--wt-subscribe-background-color); }
+.text-wt-subscribe-background { color: var(--wt-subscribe-background-color); }
+.border-wt-subscribe-background { border-color: var(--wt-subscribe-background-color); }
+
+.bg-wt-text-on-subscribe-background { background-color: var(--wt-text-on-subscribe-background-color); }
+.text-wt-text-on-subscribe-background { color: var(--wt-text-on-subscribe-background-color); }
+.border-wt-text-on-subscribe-background { border-color: var(--wt-text-on-subscribe-background-color); }
+
+.rounded-wt { border-radius: var(--wt-border-radius); }
+
+.wt-header-font { font-family: var(--wt-header-font); }
+.wt-body-font { font-family: var(--wt-body-font); }
+.wt-button-font { font-family: var(--wt-button-font); }
+
+input:focus { --tw-ring-color: transparent !important; }
+
+li a { word-break: break-word; }
+
+@media only screen and (max-width:667px) {
+  .mob-stack {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .mob-w-full {
+    width: 100% !important;
+  }
+}
+
+</style><link rel="apple-touch-icon" href="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/c0879691-e34f-4a23-8b4b-b2d9c313d91d/thumb_substack.TP-l.png"><link rel="apple-touch-startup-image" href="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/thumbnail/c0879691-e34f-4a23-8b4b-b2d9c313d91d/landscape_you_will_be_in_a_good_company__2_.png"><link rel="stylesheet" href="/assets/root-yIsHXaFR.css"><link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com"><script src="https://beehiiv-adnetwork-production.s3.amazonaws.com/pixel-js.js" async=""></script><script src="//client.px-cloud.net/PXeBumDLwe/main.min.js" async=""></script><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P8J55JDB" height="0" width="0" style="display: none; visibility: hidden;"></iframe><script id="gtm-pixel">
+          (function(){try{
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','GTM-P8J55JDB');
+          }catch{/*swallow exception*/}})();
+            </script><script id="facebook-pixel" async="">
+      (function(){try{
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', "957053745983983");
+        fbq("track", "PageView");
+      }catch{/*swallow exception*/}})();
+      </script><script id="twitter-pixel" async="">
+      (function(){try{
+        !function(e,t,n,s,u,a){e.twq||(s=e.twq=function(){s.exe?s.exe.apply(s,arguments):s.queue.push(arguments);
+        },s.version='1.1',s.queue=[],u=t.createElement(n),u.async=!0,u.src='//static.ads-twitter.com/uwt.js',
+        a=t.getElementsByTagName(n)[0],a.parentNode.insertBefore(u,a))}(window,document,'script');
+        // Insert Twitter Pixel ID and Standard Event data below
+        twq('init','of2vb');
+      }catch{/*swallow exception*/}})();
+            </script><script async="" src="https://www.googletagmanager.com/gtag/js?id=G-2JED83FP4X"></script><script async="" id="ga-pixel">
+        (function(){try{
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-2JED83FP4X', {
+          page_path: window.location.pathname,
+        });
+        }catch{/*swallow exception*/}})();
+      </script><link rel="stylesheet" type="text/css" id="ttEmbedLibCSS" href="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/embed_lib_v1.0.13.css"></head><body class="flex h-full flex-col bg-wt-background text-wt-text-on-background"><div class=""><div class="flex min-h-screen flex-col"><div></div><div id="_rht_toaster" style="position: fixed; z-index: 9999; inset: 16px; pointer-events: none;"></div><nav class="px-4 sm:px-6 w-full py-2" style="background-color: rgb(255, 255, 255);"><div class="mx-auto w-full max-w-6xl"><div class="mx-auto flex items-center justify-between"><div class="flex items-center space-x-2"><a class="rounded-lg transition:all px-2 py-1 hover:bg-black/5" data-discover="true" href="/"><div class="flex items-center space-x-2"><div class="h-8 w-8 overflow-hidden rounded-wt"><figure class="aspect-square relative h-full overflow-hidden w-full"><img class="absolute inset-0 h-full w-full object-cover" width="100" height="100" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/c0879691-e34f-4a23-8b4b-b2d9c313d91d/thumb_substack.TP-l.png" alt="Turing Post logo"></figure></div><span class="sm:text-md wt-text-primary hidden text-sm md:block text-md font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Turing Post</span></div></a><div class="block"><div class="z-20 flex gap-1"><div class="cursor-pointer" data-headlessui-state=""><div class=""><button class="rounded-lg inline-flex items-center px-2 py-2 hover:bg-black/5 focus:outline-none focus-visible:ring-2" type="button" aria-expanded="false" data-headlessui-state="" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;; z-index: 0;" id="headlessui-popover-button-:r1:"><span class="text-xs sm:block text-md font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Categories</span><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class=" ml-2 h-3 w-3 transition duration-150 ease-in-out"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"></path></svg></div></button></div></div><div hidden="" style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"></div><div class="cursor-pointer" data-headlessui-state=""><div class=""><button class="rounded-lg inline-flex items-center px-2 py-2 hover:bg-black/5 focus:outline-none focus-visible:ring-2" type="button" aria-expanded="false" data-headlessui-state="" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;; z-index: 0;" id="headlessui-popover-button-:r3:"><span class="text-xs sm:block text-md font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">ML Series</span><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class=" ml-2 h-3 w-3 transition duration-150 ease-in-out"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"></path></svg></div></button></div></div><div hidden="" style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"></div><div class="cursor-pointer" data-headlessui-state=""><div class=""><button class="rounded-lg inline-flex items-center px-2 py-2 hover:bg-black/5 focus:outline-none focus-visible:ring-2" type="button" aria-expanded="false" data-headlessui-state="" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;; z-index: 0;" id="headlessui-popover-button-:r5:"><span class="text-xs sm:block text-md font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Socials</span><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class=" ml-2 h-3 w-3 transition duration-150 ease-in-out"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd"></path></svg></div></button></div></div><div hidden="" style="position: fixed; top: 1px; left: 1px; width: 1px; height: 0px; padding: 0px; margin: -1px; overflow: hidden; clip: rect(0px, 0px, 0px, 0px); white-space: nowrap; border-width: 0px; display: none;"></div><a class="transition:all rounded-wt px-2 py-2 hover:bg-black/5" data-discover="true" href="/c/about"><span class="whitespace-nowrap text-xs sm:block text-md font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">About</span></a></div></div></div><div class="flex items-center space-x-2"><div class="flex items-center"><div class="relative inline-block text-left" data-headlessui-state=""><button aria-label="Menu" class="rounded-full transition-all" id="headlessui-menu-button-:r8:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><div class="mt-1.5 rounded hover:bg-black/5" style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-6 w-6"><path fill-rule="evenodd" d="M5.25 9a6.75 6.75 0 0 1 13.5 0v.75c0 2.123.8 4.057 2.118 5.52a.75.75 0 0 1-.297 1.206c-1.544.57-3.16.99-4.831 1.243a3.75 3.75 0 1 1-7.48 0 24.585 24.585 0 0 1-4.831-1.244.75.75 0 0 1-.298-1.205A8.217 8.217 0 0 0 5.25 9.75V9Zm4.502 8.9a2.25 2.25 0 1 0 4.496 0 25.057 25.057 0 0 1-4.496 0Z" clip-rule="evenodd"></path></svg></div></button></div></div><div class="relative inline-block text-left" data-headlessui-state="open"><button aria-label="Menu" class="rounded-full transition-all" id="headlessui-menu-button-:r9:" type="button" aria-haspopup="menu" aria-expanded="true" data-headlessui-state="open" aria-controls="headlessui-menu-items-:ri:"><div class="mt-1.5 rounded hover:bg-black/5" style="color: rgb(34, 34, 34);"><div class="h-6 w-6 overflow-hidden rounded-full"><img class="h-6 w-6 rounded-full" src="https://www.gravatar.com/avatar/b10b0cc74d3a36ef6a24a9475521b98b?d=mp" alt="The logged in user"></div></div></button><div class="rounded-lg absolute mt-2 bg-white bg-wt-tertiary shadow-lg ring-1 ring-black/5 focus:outline-none origin-top-right right-0 z-50 sm:w-[300px]" aria-labelledby="headlessui-menu-button-:r9:" id="headlessui-menu-items-:ri:" role="menu" tabindex="0" data-headlessui-state="open" style="background: rgb(255, 255, 255);"><div class="" role="none"><div class="flex flex-col" role="none"><button class="flex justify-between space-x-4 py-2 pl-6 pr-4" id="headlessui-disclosure-button-:rj:" type="button" aria-expanded="false" data-headlessui-state="" role="none"><div role="none"><div class="flex items-center pt-0.5" role="none"><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;" role="none">Categories</span></div></div><div role="none"><div class="rounded-sm bg-transparent p-1 hover:bg-gray-50/10" style="color: rgb(34, 34, 34);" role="none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="transition-50 h-4 w-4 transition-transform rotate-180 transform" role="none"><path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" role="none"></path></svg></div></div></button></div><div class="flex flex-col" role="none"><button class="flex justify-between space-x-4 py-2 pl-6 pr-4" id="headlessui-disclosure-button-:rl:" type="button" aria-expanded="false" data-headlessui-state="" role="none"><div role="none"><div class="flex items-center pt-0.5" role="none"><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;" role="none">ML Series</span></div></div><div role="none"><div class="rounded-sm bg-transparent p-1 hover:bg-gray-50/10" style="color: rgb(34, 34, 34);" role="none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="transition-50 h-4 w-4 transition-transform rotate-180 transform" role="none"><path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" role="none"></path></svg></div></div></button></div><div class="flex flex-col" role="none"><button class="flex justify-between space-x-4 py-2 pl-6 pr-4" id="headlessui-disclosure-button-:rn:" type="button" aria-expanded="false" data-headlessui-state="" role="none"><div role="none"><div class="flex items-center pt-0.5" role="none"><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;" role="none">Socials</span></div></div><div role="none"><div class="rounded-sm bg-transparent p-1 hover:bg-gray-50/10" style="color: rgb(34, 34, 34);" role="none"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="transition-50 h-4 w-4 transition-transform rotate-180 transform" role="none"><path fill-rule="evenodd" d="M9.47 6.47a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 1 1-1.06 1.06L10 8.06l-3.72 3.72a.75.75 0 0 1-1.06-1.06l4.25-4.25Z" clip-rule="evenodd" role="none"></path></svg></div></div></button></div><a class="flex items-center space-x-2 px-6 py-3" id="headlessui-menu-item-:rp:" role="menuitem" tabindex="-1" data-headlessui-state="" data-discover="true" href="/c/about"><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">About</span></a></div><div role="none"><a class="flex items-center space-x-2 px-6 py-3" id="headlessui-menu-item-:rq:" role="menuitem" tabindex="-1" data-headlessui-state="" data-discover="true" href="/upgrade"><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-4 w-4"><path fill-rule="evenodd" d="M9 4.5a.75.75 0 0 1 .721.544l.813 2.846a3.75 3.75 0 0 0 2.576 2.576l2.846.813a.75.75 0 0 1 0 1.442l-2.846.813a3.75 3.75 0 0 0-2.576 2.576l-.813 2.846a.75.75 0 0 1-1.442 0l-.813-2.846a3.75 3.75 0 0 0-2.576-2.576l-2.846-.813a.75.75 0 0 1 0-1.442l2.846-.813A3.75 3.75 0 0 0 7.466 7.89l.813-2.846A.75.75 0 0 1 9 4.5ZM18 1.5a.75.75 0 0 1 .728.568l.258 1.036c.236.94.97 1.674 1.91 1.91l1.036.258a.75.75 0 0 1 0 1.456l-1.036.258c-.94.236-1.674.97-1.91 1.91l-.258 1.036a.75.75 0 0 1-1.456 0l-.258-1.036a2.625 2.625 0 0 0-1.91-1.91l-1.036-.258a.75.75 0 0 1 0-1.456l1.036-.258a2.625 2.625 0 0 0 1.91-1.91l.258-1.036A.75.75 0 0 1 18 1.5ZM16.5 15a.75.75 0 0 1 .712.513l.394 1.183c.15.447.5.799.948.948l1.183.395a.75.75 0 0 1 0 1.422l-1.183.395c-.447.15-.799.5-.948.948l-.395 1.183a.75.75 0 0 1-1.422 0l-.395-1.183a1.5 1.5 0 0 0-.948-.948l-1.183-.395a.75.75 0 0 1 0-1.422l1.183-.395c.447-.15.799-.5.948-.948l.395-1.183A.75.75 0 0 1 16.5 15Z" clip-rule="evenodd"></path></svg></div><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Upgrade</span></a><a class="flex items-center space-x-2 px-6 py-3" id="headlessui-menu-item-:rr:" role="menuitem" tabindex="-1" data-headlessui-state="" data-discover="true" href="/publications"><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-4 w-4"><path fill-rule="evenodd" d="M4.125 3C3.089 3 2.25 3.84 2.25 4.875V18a3 3 0 0 0 3 3h15a3 3 0 0 1-3-3V4.875C17.25 3.839 16.41 3 15.375 3H4.125ZM12 9.75a.75.75 0 0 0 0 1.5h1.5a.75.75 0 0 0 0-1.5H12Zm-.75-2.25a.75.75 0 0 1 .75-.75h1.5a.75.75 0 0 1 0 1.5H12a.75.75 0 0 1-.75-.75ZM6 12.75a.75.75 0 0 0 0 1.5h7.5a.75.75 0 0 0 0-1.5H6Zm-.75 3.75a.75.75 0 0 1 .75-.75h7.5a.75.75 0 0 1 0 1.5H6a.75.75 0 0 1-.75-.75ZM6 6.75a.75.75 0 0 0-.75.75v3c0 .414.336.75.75.75h3a.75.75 0 0 0 .75-.75v-3A.75.75 0 0 0 9 6.75H6Z" clip-rule="evenodd"></path><path d="M18.75 6.75h1.875c.621 0 1.125.504 1.125 1.125V18a1.5 1.5 0 0 1-3 0V6.75Z"></path></svg></div><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Newsletters</span></a><a class="flex items-center space-x-2 px-6 py-3" id="headlessui-menu-item-:rs:" role="menuitem" tabindex="-1" data-headlessui-state="" data-discover="true" href="/authors"><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-4 w-4"><path fill-rule="evenodd" d="M8.25 6.75a3.75 3.75 0 1 1 7.5 0 3.75 3.75 0 0 1-7.5 0ZM15.75 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM2.25 9.75a3 3 0 1 1 6 0 3 3 0 0 1-6 0ZM6.31 15.117A6.745 6.745 0 0 1 12 12a6.745 6.745 0 0 1 6.709 7.498.75.75 0 0 1-.372.568A12.696 12.696 0 0 1 12 21.75c-2.305 0-4.47-.612-6.337-1.684a.75.75 0 0 1-.372-.568 6.787 6.787 0 0 1 1.019-4.38Z" clip-rule="evenodd"></path><path d="M5.082 14.254a8.287 8.287 0 0 0-1.308 5.135 9.687 9.687 0 0 1-1.764-.44l-.115-.04a.563.563 0 0 1-.373-.487l-.01-.121a3.75 3.75 0 0 1 3.57-4.047ZM20.226 19.389a8.287 8.287 0 0 0-1.308-5.135 3.75 3.75 0 0 1 3.57 4.047l-.01.121a.563.563 0 0 1-.373.486l-.115.04c-.567.2-1.156.349-1.764.441Z"></path></svg></div><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Authors</span></a><a class="flex items-center space-x-2 px-6 py-3" id="headlessui-menu-item-:rt:" role="menuitem" tabindex="-1" data-headlessui-state="" data-discover="true" href="/subscribe/583422520/manage"><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-4 w-4"><path fill-rule="evenodd" d="M11.828 2.25c-.916 0-1.699.663-1.85 1.567l-.091.549a.798.798 0 0 1-.517.608 7.45 7.45 0 0 0-.478.198.798.798 0 0 1-.796-.064l-.453-.324a1.875 1.875 0 0 0-2.416.2l-.243.243a1.875 1.875 0 0 0-.2 2.416l.324.453a.798.798 0 0 1 .064.796 7.448 7.448 0 0 0-.198.478.798.798 0 0 1-.608.517l-.55.092a1.875 1.875 0 0 0-1.566 1.849v.344c0 .916.663 1.699 1.567 1.85l.549.091c.281.047.508.25.608.517.06.162.127.321.198.478a.798.798 0 0 1-.064.796l-.324.453a1.875 1.875 0 0 0 .2 2.416l.243.243c.648.648 1.67.733 2.416.2l.453-.324a.798.798 0 0 1 .796-.064c.157.071.316.137.478.198.267.1.47.327.517.608l.092.55c.15.903.932 1.566 1.849 1.566h.344c.916 0 1.699-.663 1.85-1.567l.091-.549a.798.798 0 0 1 .517-.608 7.52 7.52 0 0 0 .478-.198.798.798 0 0 1 .796.064l.453.324a1.875 1.875 0 0 0 2.416-.2l.243-.243c.648-.648.733-1.67.2-2.416l-.324-.453a.798.798 0 0 1-.064-.796c.071-.157.137-.316.198-.478.1-.267.327-.47.608-.517l.55-.091a1.875 1.875 0 0 0 1.566-1.85v-.344c0-.916-.663-1.699-1.567-1.85l-.549-.091a.798.798 0 0 1-.608-.517 7.507 7.507 0 0 0-.198-.478.798.798 0 0 1 .064-.796l.324-.453a1.875 1.875 0 0 0-.2-2.416l-.243-.243a1.875 1.875 0 0 0-2.416-.2l-.453.324a.798.798 0 0 1-.796.064 7.462 7.462 0 0 0-.478-.198.798.798 0 0 1-.517-.608l-.091-.55a1.875 1.875 0 0 0-1.85-1.566h-.344ZM12 15.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z" clip-rule="evenodd"></path></svg></div><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Manage Subscription</span></a><a class="flex items-center space-x-2 px-6 py-3" id="headlessui-menu-item-:ru:" role="menuitem" tabindex="-1" data-headlessui-state="" data-discover="true" href="/subscribe/583422520/referrals"><div style="color: rgb(34, 34, 34);"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" data-slot="icon" class="h-4 w-4"><path d="M5.25 6.375a4.125 4.125 0 1 1 8.25 0 4.125 4.125 0 0 1-8.25 0ZM2.25 19.125a7.125 7.125 0 0 1 14.25 0v.003l-.001.119a.75.75 0 0 1-.363.63 13.067 13.067 0 0 1-6.761 1.873c-2.472 0-4.786-.684-6.76-1.873a.75.75 0 0 1-.364-.63l-.001-.122ZM18.75 7.5a.75.75 0 0 0-1.5 0v2.25H15a.75.75 0 0 0 0 1.5h2.25v2.25a.75.75 0 0 0 1.5 0v-2.25H21a.75.75 0 0 0 0-1.5h-2.25V7.5Z"></path></svg></div><span class="text-sm font-medium font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Referrals</span></a></div><div class="flex w-full flex-col p-2" role="none"><form method="post" action="/logout" data-discover="true" role="none"><button type="submit" class="border font-medium shadow-sm wt-button-font inline-flex items-center disabled:bg-gray-400 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 justify-center transition-colors rounded-wt px-4 py-2 text-sm border-gray-300 text-gray-700 bg-white shadow-md focus:ring-wt-primary" style="background: rgb(249, 250, 251); border-color: rgb(229, 231, 235); color: rgb(3, 7, 18); font-family: &quot;Space Grotesk&quot;; font-weight: 500; width: 100%;" role="none">Logout</button></form></div></div></div></div></div></div></nav><main class="flex-grow"><div><div class="sticky top-0 z-50 w-full"><div aria-valuemax="100" aria-valuemin="0" aria-valuenow="0" aria-valuetext="0%" role="progressbar" data-state="loading" data-value="0" data-max="100" class="relative overflow-hidden h-1.5 bg-transparent w-full"><div data-state="loading" data-value="0" data-max="100" class="h-full w-full bg-wt-primary" style="width: 0%;"></div></div></div><div class="fixed bottom-0 left-0 z-50 px-4"></div><script type="module">
+var e, t, r, i, n;
+(t = {}),
+  (r = {}),
+  null ==
+    (i = (e =
+      "undefined" != typeof globalThis
+        ? globalThis
+        : "undefined" != typeof self
+          ? self
+          : "undefined" != typeof window
+            ? window
+            : "undefined" != typeof global
+              ? global
+              : {}).parcelRequire326a) &&
+    (((i = function (e) {
+      if (e in t) return t[e].exports;
+      if (e in r) {
+        var i = r[e];
+        delete r[e];
+        var n = { id: e, exports: {} };
+        return (t[e] = n), i.call(n.exports, n, n.exports), n.exports;
+      }
+      var o = Error("Cannot find module '" + e + "'");
+      throw ((o.code = "MODULE_NOT_FOUND"), o);
+    }).register = function (e, t) {
+      r[e] = t;
+    }),
+    (e.parcelRequire326a = i)),
+  (n = i.register)("gUOGs", function (e, t) {
+    Object.defineProperty(e.exports, "__esModule", { value: !0 });
+    var r,
+      n = i("kBCj4"),
+      o = i("53LBo"),
+      s = [],
+      a = (function () {
+        function e(e) {
+          (this.$$observationTargets = []),
+            (this.$$activeTargets = []),
+            (this.$$skippedTargets = []);
+          var t =
+            void 0 === e
+              ? "Failed to construct 'ResizeObserver': 1 argument required, but only 0 present."
+              : "function" != typeof e
+                ? "Failed to construct 'ResizeObserver': The callback provided as parameter 1 is not a function."
+                : void 0;
+          if (t) throw TypeError(t);
+          this.$$callback = e;
+        }
+        return (
+          (e.prototype.observe = function (e) {
+            var t = d("observe", e);
+            if (t) throw TypeError(t);
+            u(this.$$observationTargets, e) >= 0 ||
+              (this.$$observationTargets.push(new n.ResizeObservation(e)),
+              0 > s.indexOf(this) && (s.push(this), v()));
+          }),
+          (e.prototype.unobserve = function (e) {
+            var t = d("unobserve", e);
+            if (t) throw TypeError(t);
+            var r = u(this.$$observationTargets, e);
+            r < 0 ||
+              (this.$$observationTargets.splice(r, 1),
+              0 === this.$$observationTargets.length && c(this));
+          }),
+          (e.prototype.disconnect = function () {
+            (this.$$observationTargets = []),
+              (this.$$activeTargets = []),
+              c(this);
+          }),
+          e
+        );
+      })();
+    function c(e) {
+      var t = s.indexOf(e);
+      t >= 0 && (s.splice(t, 1), $());
+    }
+    function d(e, t) {
+      return void 0 === t
+        ? "Failed to execute '" +
+            e +
+            "' on 'ResizeObserver': 1 argument required, but only 0 present."
+        : t && t.nodeType === window.Node.ELEMENT_NODE
+          ? void 0
+          : "Failed to execute '" +
+            e +
+            "' on 'ResizeObserver': parameter 1 is not of type 'Element'.";
+    }
+    function u(e, t) {
+      for (var r = 0; r < e.length; r += 1) if (e[r].target === t) return r;
+      return -1;
+    }
+    e.exports.ResizeObserver = a;
+    var l = function (e) {
+        s.forEach(function (t) {
+          (t.$$activeTargets = []),
+            (t.$$skippedTargets = []),
+            t.$$observationTargets.forEach(function (r) {
+              r.isActive() &&
+                (h(r.target) > e
+                  ? t.$$activeTargets.push(r)
+                  : t.$$skippedTargets.push(r));
+            });
+        });
+      },
+      f = function () {
+        var e = 1 / 0;
+        return (
+          s.forEach(function (t) {
+            if (t.$$activeTargets.length) {
+              var r = [];
+              t.$$activeTargets.forEach(function (t) {
+                var i = new o.ResizeObserverEntry(t.target);
+                r.push(i),
+                  (t.$$broadcastWidth = i.contentRect.width),
+                  (t.$$broadcastHeight = i.contentRect.height);
+                var n = h(t.target);
+                n < e && (e = n);
+              }),
+                t.$$callback(r, t),
+                (t.$$activeTargets = []);
+            }
+          }),
+          e
+        );
+      },
+      p = function () {
+        var e = new window.ErrorEvent("ResizeLoopError", {
+          message:
+            "ResizeObserver loop completed with undelivered notifications.",
+        });
+        window.dispatchEvent(e);
+      },
+      h = function (e) {
+        for (var t = 0; e.parentNode; ) (e = e.parentNode), (t += 1);
+        return t;
+      },
+      g = function () {
+        for (
+          l(0);
+          s.some(function (e) {
+            return !!e.$$activeTargets.length;
+          });
+
+        )
+          l(f());
+        s.some(function (e) {
+          return !!e.$$skippedTargets.length;
+        }) && p();
+      },
+      v = function () {
+        r || b();
+      },
+      b = function () {
+        r = window.requestAnimationFrame(function () {
+          g(), b();
+        });
+      },
+      $ = function () {
+        r &&
+          !s.some(function (e) {
+            return !!e.$$observationTargets.length;
+          }) &&
+          (window.cancelAnimationFrame(r), (r = void 0));
+      };
+    e.exports.install = function () {
+      return (window.ResizeObserver = a);
+    };
+  }),
+  n("kBCj4", function (e, t) {
+    Object.defineProperty(e.exports, "__esModule", { value: !0 });
+    var r = i("ardMU"),
+      n = (function () {
+        function e(e) {
+          (this.target = e),
+            (this.$$broadcastWidth = this.$$broadcastHeight = 0);
+        }
+        return (
+          Object.defineProperty(e.prototype, "broadcastWidth", {
+            get: function () {
+              return this.$$broadcastWidth;
+            },
+            enumerable: !0,
+            configurable: !0,
+          }),
+          Object.defineProperty(e.prototype, "broadcastHeight", {
+            get: function () {
+              return this.$$broadcastHeight;
+            },
+            enumerable: !0,
+            configurable: !0,
+          }),
+          (e.prototype.isActive = function () {
+            var e = r.ContentRect(this.target);
+            return (
+              !!e &&
+              (e.width !== this.broadcastWidth ||
+                e.height !== this.broadcastHeight)
+            );
+          }),
+          e
+        );
+      })();
+    e.exports.ResizeObservation = n;
+  }),
+  n("ardMU", function (e, t) {
+    Object.defineProperty(e.exports, "__esModule", { value: !0 }),
+      (e.exports.ContentRect = function (e) {
+        if ("getBBox" in e) {
+          var t = e.getBBox();
+          return Object.freeze({
+            height: t.height,
+            left: 0,
+            top: 0,
+            width: t.width,
+          });
+        }
+        var r = window.getComputedStyle(e);
+        return Object.freeze({
+          height: parseFloat(r.height || "0"),
+          left: parseFloat(r.paddingLeft || "0"),
+          top: parseFloat(r.paddingTop || "0"),
+          width: parseFloat(r.width || "0"),
+        });
+      });
+  }),
+  n("53LBo", function (e, t) {
+    Object.defineProperty(e.exports, "__esModule", { value: !0 });
+    var r = i("ardMU");
+    e.exports.ResizeObserverEntry = function (e) {
+      (this.target = e), (this.contentRect = r.ContentRect(e));
+    };
+  }),
+  (function () {
+    if (
+      !(function () {
+        if (!window.__stwts || !Object.keys(window.__stwts).length)
+          return (
+            (window.__stwts = { buildVersion: "1.0.0", widgets: { init: !0 } }),
+            !0
+          );
+      })()
+    )
+      return;
+    function e(e, t) {
+      t <= 300 && (e.style.width = "300px"),
+        t >= 600 && (e.style.width = "600px"),
+        t > 300 && t < 600 && (e.style.width = `${t}px`);
+    }
+    "undefined" == typeof ResizeObserver && i("gUOGs").install();
+    let t = new (ResizeObserver || window.ResizeObserver)(function (t) {
+      t.forEach((t) => {
+        let r = t?.contentRect?.width,
+          i = t.target.querySelector("iframe");
+        r && i && e(i, r);
+      });
+    });
+
+    function loadStocktwitsEmbeds() {
+      Array.from(
+        document.querySelectorAll("blockquote.stocktwits-embedded-post"),
+      ).forEach((r) => {
+        !(function (t, r) {
+          if (t.getAttribute("visited")) return;
+          let i = t.getAttribute("data-origin"),
+            n = t.getAttribute("data-id"),
+            o = document.createElement("div");
+          (o.style.display = "flex"),
+            (o.style.maxWidth = "600px"),
+            (o.style.width = "100%"),
+            (o.style.marginTop = "10px"),
+            (o.style.marginBottom = "10px");
+          let s = document.createElement("iframe");
+          o.appendChild(s);
+          let a = `${i}/embeddable/message/${n}`;
+          (s.style.width = "640px"),
+            (s.style.height = "0"),
+            (s.style.maxWidth = "600px"),
+            (s.style.position = "static"),
+            (s.style.visibility = "visible"),
+            (s.style.display = "block"),
+            (s.style.flexGrow = "1"),
+            s.setAttribute("frameborder", "0"),
+            s.setAttribute("allowtransparency", "true"),
+            s.setAttribute("scrolling", "no"),
+            s.setAttribute("allowfullscreen", "true");
+          let c = !1,
+            d = null;
+          function u(e) {
+            c = !0;
+            let { height: r } = e.data;
+            void 0 !== r && (s.style.height = `${r}px`),
+              document.body.contains(t) && t.remove();
+          }
+          t.parentNode.insertBefore(o, t), t.setAttribute("visited", true),
+            s.addEventListener("load", function () {
+              e(s, o.clientWidth),
+                (function () {
+                  let e = () => {
+                    ((d = new MessageChannel()).port1.onmessage = u),
+                      s.contentWindow.postMessage(
+                        { message: "initialize" },
+                        "*",
+                        [d.port2],
+                      );
+                  };
+                  e();
+                  let t = setInterval(() => {
+                    c ? clearInterval(t) : e();
+                  }, 60);
+                })();
+            }),
+            s.setAttribute("src", a),
+            r.observe(o);
+        })(r, t);
+      });
+    }
+
+    window.__stwts.loadStocktwitsEmbeds = loadStocktwitsEmbeds;
+  })();
+</script><div class="relative mx-auto max-w-6xl px-4"><div class="fixed bottom-0 left-0 top-auto z-20 w-full rounded bg-wt-background shadow-xl transition-all duration-300 ease-in-out md:bottom-auto md:z-auto md:!w-fit md:border-none md:shadow-none opacity-100 md:top-20"><div class="absolute left-0 top-0 w-full border border-t border-wt-text-on-background bg-wt-background opacity-10 md:hidden"></div><div class="mx-auto w-full max-w-6xl px-0 lg:px-4"><div class="flex flex-col gap-8 md:h-40"><div class=""><div class="grid grid-cols-3 p-4 px-8 sm:p-2 sm:px-2 md:grid-cols-1 md:gap-2"><div class="relative flex flex-col justify-center md:left-1"><div class="flex h-7 w-7 items-center justify-center rounded-wt transition-all hover:bg-black/5"><button class="cursor-pointer"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="h-6 w-6 stroke-1 text-wt-text-on-background opacity-50"><path stroke-linecap="round" stroke-linejoin="round" d="M10.5 19.5 3 12m0 0 7.5-7.5M3 12h18"></path></svg></button></div></div><div class="flex items-center justify-center gap-3 md:flex-col md:items-start md:gap-1"><form method="post" action="/post_like" class="group relative top-[3px]"><input type="hidden" name="post_id" value="4f3a79da-99e8-4826-8108-649739f224fb"><input type="hidden" name="subscription_id" value="583422520"><input type="hidden" name="user_id" value=""><button type="submit"><div class="text-wt-text-on-background opacity-50 group-hover:opacity-100 flex items-center"><div class="rounded-full p-1 hover:bg-[#f3f4f6]"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 outline-none h-4 w-4 stroke-1"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12Z"></path></svg></div><span class="text-[#6B7280] text-wt-text-on-background text-sm font-medium group-hover:opacity-100">222</span></div></button></form><button type="button" class="group relative top-[1px] flex items-center outline-none md:pt-0"><div class="rounded-full p-1 hover:bg-[#f3f4f6]"><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-7 w-7 stroke-1 text-wt-text-on-background opacity-50 group-hover:opacity-100"><path stroke-linecap="round" stroke-linejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 0 1-.825-.242m9.345-8.334a2.126 2.126 0 0 0-.476-.095 48.64 48.64 0 0 0-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0 0 11.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155"></path></svg></div><span class="hidden relative -top-[1px] text-sm font-medium group-hover:opacity-100 md:top-0">0</span></button><div class="relative z-20 inline-block text-left md:z-0" data-headlessui-state=""><button class="relative right-[2px] top-[1.5px] outline-none md:right-[0px]" id="headlessui-menu-button-:rd:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state=""><div class="flex items-center rounded-full p-1 hover:bg-[#f3f4f6]"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="text-wt-text-on-background opacity-50 hover:opacity-100 h-7 w-7 stroke-1 text-gray-400"><path stroke-linecap="round" stroke-linejoin="round" d="M7.217 10.907a2.25 2.25 0 1 0 0 2.186m0-2.186c.18.324.283.696.283 1.093s-.103.77-.283 1.093m0-2.186 9.566-5.314m-9.566 7.5 9.566 5.314m0 0a2.25 2.25 0 1 0 3.935 2.186 2.25 2.25 0 0 0-3.935-2.186Zm0-12.814a2.25 2.25 0 1 0 3.933-2.185 2.25 2.25 0 0 0-3.933 2.185Z"></path></svg></div></button></div></div></div></div></div></div></div><div class=""><div class="mx-auto flex max-w-2xl flex-col pb-4"><div class="mt-8" style="padding-left: 45px; padding-right: 45px;"><ul class="flex flex-wrap items-center gap-2 text-xs font-semibold"><li class="flex items-center gap-2 text-wt-text-on-background"><a href="../" class="opacity-70">Turing Post</a><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" height="14px"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg></li><li class="flex items-center gap-2 text-wt-text-on-background"><span class="opacity-70">Posts</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" height="14px"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg></li><li class="flex items-center gap-2 text-wt-text-on-background"><span class="!opacity-100">Topic 27: What are Chain-of-Agents and Chain-of-RAG?</span></li></ul></div><div><div><div><link href="https://fonts.gstatic.com" rel="preconnect"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&amp;display=swap" rel="stylesheet"><link href="https://fonts.googleapis.com/css2?family=Space+Grotesk&amp;display=swap" rel="stylesheet"><style type="text/css">
+:root {
+  --wt-primary-color: #696969;
+  --wt-text-on-primary-color: #FFFFFF;
+
+  --wt-secondary-color: #F9FAFB;
+  --wt-text-on-secondary-color: #030712;
+
+  --wt-tertiary-color: #FFFFFF;
+  --wt-text-on-tertiary-color: #222222;
+
+  --wt-background-color: #FFFFFF;
+  --wt-text-on-background-color: #222222;
+
+  --wt-subscribe-background-color: #FFFFFF;
+  --wt-text-on-subscribe-background-color: #222222;
+
+  --wt-header-font: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,"Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --wt-body-font: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --wt-button-font: "Space Grotesk", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+
+  --wt-border-radius: 8px
+}
+
+.bg-wt-primary { background-color: var(--wt-primary-color); }
+.text-wt-primary { color: var(--wt-primary-color); }
+.border-wt-primary { border-color: var(--wt-primary-color); }
+
+.bg-wt-text-on-primary { background-color: var(--wt-text-on-primary-color); }
+.text-wt-text-on-primary { color: var(--wt-text-on-primary-color); }
+.border-wt-text-on-primary { border-color: var(--wt-text-on-primary-color); }
+
+.bg-wt-secondary { background-color: var(--wt-secondary-color); }
+.text-wt-secondary { color: var(--wt-secondary-color); }
+.border-wt-secondary { border-color: var(--wt-secondary-color); }
+
+.bg-wt-text-on-secondary { background-color: var(--wt-text-on-secondary-color); }
+.text-wt-text-on-secondary { color: var(--wt-text-on-secondary-color); }
+.border-wt-text-on-secondary { border-color: var(--wt-text-on-secondary-color); }
+
+.bg-wt-tertiary { background-color: var(--wt-tertiary-color); }
+.text-wt-tertiary { color: var(--wt-tertiary-color); }
+.border-wt-tertiary { border-color: var(--wt-tertiary-color); }
+
+.bg-wt-text-on-tertiary { background-color: var(--wt-text-on-tertiary-color); }
+.text-wt-text-on-tertiary { color: var(--wt-text-on-tertiary-color); }
+.border-wt-text-on-tertiary { border-color: var(--wt-text-on-tertiary-color); }
+
+.bg-wt-background { background-color: var(--wt-background-color); }
+.text-wt-background { color: var(--wt-background-color); }
+.border-wt-background { border-color: var(--wt-background-color); }
+
+.bg-wt-text-on-background { background-color: var(--wt-text-on-background-color); }
+.text-wt-text-on-background { color: var(--wt-text-on-background-color); }
+.border-wt-text-on-background { border-color: var(--wt-text-on-background-color); }
+
+.bg-wt-subscribe-background { background-color: var(--wt-subscribe-background-color); }
+.text-wt-subscribe-background { color: var(--wt-subscribe-background-color); }
+.border-wt-subscribe-background { border-color: var(--wt-subscribe-background-color); }
+
+.bg-wt-text-on-subscribe-background { background-color: var(--wt-text-on-subscribe-background-color); }
+.text-wt-text-on-subscribe-background { color: var(--wt-text-on-subscribe-background-color); }
+.border-wt-text-on-subscribe-background { border-color: var(--wt-text-on-subscribe-background-color); }
+
+.rounded-wt { border-radius: var(--wt-border-radius); }
+
+.wt-header-font { font-family: var(--wt-header-font); }
+.wt-body-font { font-family: var(--wt-body-font); }
+.wt-button-font { font-family: var(--wt-button-font); }
+
+input:focus { --tw-ring-color: transparent !important; }
+
+li a { word-break: break-word; }
+
+@media only screen and (max-width:667px) {
+  .mob-stack {
+    display: block !important;
+    width: 100% !important;
+  }
+
+  .mob-w-full {
+    width: 100% !important;
+  }
+}
+
+</style><style>
+        @font-face {
+          font-family: 'Space Grotesk';
+          font-style: normal;
+          font-weight: 700;
+          font-display: swap;
+          src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj4PVnskPMBBSSJLm2E.woff2') format('woff2');
+        }
+
+        @font-face {
+          font-family: 'Space Grotesk';
+          font-style: normal;
+          font-weight: 400;
+          font-display: swap;
+          src: url('https://fonts.gstatic.com/s/spacegrotesk/v16/V8mQoQDjQSkFtoMM3T6r8E7mF71Q-gOoraIAEj7oUXskPMBBSSJLm2E.woff2') format('woff2');
+        }
+
+</style><script async="" id="tiktok-script" src="https://www.tiktok.com/embed.js" type="text/javascript"></script><script async="" defer="" id="twitter-wjs" src="https://platform.twitter.com/widgets.js" type="text/javascript"></script><style>
+  .table-base, .table-c, .table-h { border: 1px solid #C0C0C0; }
+  .table-c { padding:5px; background-color:#FFFFFF; }
+  .table-c p { color: #2D2D2D; font-family:'Helvetica',Arial,sans-serif !important; overflow-wrap: break-word; }
+  .table-h { padding:5px; background-color:#F1F1F1; }
+  .table-h p { color: #2A2A2A; font-family:'Trebuchet MS','Lucida Grande',Tahoma,sans-serif !important; overflow-wrap: break-word; }
+</style></div><div class="bg-wt-background" style="color: var(--wt-text-on-background-color) !important;"><div class="rendered-post" style="max-width: 672px; margin: 0 auto;"><div class="bg-wt-background text-wt-text-on-background"><div style="padding-top:1.5rem; padding-bottom:1.5rem;"><style>
+  .bh__byline_wrapper {
+    font-size: .875rem;
+    line-height: 1.25rem;
+    vertical-align: middle;
+    justify-content: space-between;
+    display: block;
+  }
+  
+  .bh__byline_social_wrapper {
+    display: flex;
+    margin-top: 0.5rem;
+    align-items: center;
+  }
+  
+  .bh__byline_social_wrapper > * + * {
+    margin-left: 1rem;
+  }
+  
+  @media (min-width: 768px) {
+    .bh__byline_wrapper {
+      display: flex;
+    }
+  
+    .bh__byline_social_wrapper {
+      margin-top: 0rem;
+    }
+  }
+</style><div id="web-header" style="padding-left: 45px; padding-right: 45px; color: var(--wt-text-on-background-color) !important; padding-bottom: 2rem;"><h1 style="font-size: 36px; font-family:'Space Grotesk',Helvetica,Arial,sans-serif; line-height: 2.5rem; padding-bottom: 8px; font-weight: 700;">Topic 27: What are Chain-of-Agents and Chain-of-RAG?</h1><h2 style="font-size: 20px; font-family:'Courier','Lucida Typewriter',monospace; line-height: 1.75rem; padding-bottom: 30px; color: #32373e; font-weight: 400;">We explore Google's and Microsoft's advancements that implement "chain" approaches for long context and multi-hop reasoning</h2><div class="bh__byline_wrapper"><div><div style="display:flex;"><div style="display:flex; flex-direction:row; justify-content:flex-start;"><div style="display:flex;"><img alt="Author" height="30" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/user/profile_picture/2ab840ec-0d97-4907-9dd7-07c12be27704/thumb_photo_2024-02-10_10-25-12_copy.jpg" style="height:30px;width:30px;border:3px solid rgba(0,0,0,0);left:-3px;z-index:1;box-sizing:content-box;position:relative;border-radius:9999px;" width="30"></div><div style="display:flex; align-items:center;"><p style="left:6px;position:relative;font-family:'Space Grotesk',Helvetica,Arial,sans-serif;font-weight:normal;font-size:12px;color: var(--wt-text-on-background-color);margin:0px;line-height:17px;"><span><a href="https://www.turingpost.com/authors/2ab840ec-0d97-4907-9dd7-07c12be27704" target="_blank" style="color:var(--wt-text-on-background-color) !important;text-decoration:underline !important;">Alyona Vert.</a></span><br><span class="text-wt-text-on-background" style="opacity:0.75;"> February 12, 2025 </span></p></div></div></div></div><div class="bh__byline_social_wrapper"><a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.turingpost.com%2Fp%2Fcoa-and-co-rag" target="_blank"><div style="max-width:28px;"><svg fill="none" height="100%" viewBox="0 0 212 212" width="100%" xmlns="http://www.w3.org/2000/svg"><circle cx="106.214" cy="105.5" fill-opacity="0.15" fill="#9CA3AF" r="105.5"></circle><path d="M96.9223 92.1778H87.0327V105.498H96.9223V145.461H113.405V105.498H125.273L126.591 92.1778H113.405V86.5165C113.405 83.5193 114.064 82.1873 117.031 82.1873H126.591V65.5364H114.064C102.197 65.5364 96.9223 70.8647 96.9223 80.8552V92.1778Z" fill="#BAC2CE"></path></svg></div></a><a href="https://twitter.com/intent/tweet?text=We+explore+Google%27s+and+Microsoft%27s+advancements+that+implement+%22chain%22+approaches+for+long+context+and+multi-hop+reasoning&amp;url=https%3A%2F%2Fwww.turingpost.com%2Fp%2Fcoa-and-co-rag" target="_blank"><div style="max-width:28px;"><svg fill="none" height="100%" viewBox="0 0 52 52" width="100%" xmlns="http://www.w3.org/2000/svg"><circle cx="26" cy="26" fill-opacity="0.15" fill="#9CA3AF" r="26"></circle><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z" fill="#BAC2CE" transform="translate(14,14)"></path></svg></div></a><a href="https://www.threads.net/intent/post?text=We+explore+Google%27s+and+Microsoft%27s+advancements+that+implement+%22chain%22+approaches+for+long+context+and+multi-hop+reasoning+https%3A%2F%2Fwww.turingpost.com%2Fp%2Fcoa-and-co-rag" target="_blank"><div style="max-width:28px;"><svg fill="none" height="100%" viewBox="0 0 211 211" width="100%" xmlns="http://www.w3.org/2000/svg"><circle cx="105.5" cy="105.5" fill-opacity="0.15" fill="#9CA3AF" r="105.5"></circle><path d="M125.185 102.469C124.828 102.298 124.465 102.133 124.097 101.975C123.456 90.1702 117.006 83.4121 106.175 83.3429C106.126 83.3426 106.077 83.3426 106.028 83.3426C99.5502 83.3426 94.1624 86.1078 90.8463 91.1396L96.8028 95.2256C99.2801 91.4671 103.168 90.6658 106.031 90.6658C106.064 90.6658 106.097 90.6658 106.13 90.6661C109.696 90.6889 112.387 91.7257 114.129 93.7477C115.397 95.2198 116.244 97.254 116.664 99.8213C113.502 99.2839 110.083 99.1187 106.427 99.3283C96.13 99.9214 89.5101 105.927 89.9547 114.272C90.1803 118.505 92.2891 122.147 95.8924 124.526C98.9389 126.537 102.863 127.52 106.941 127.297C112.326 127.002 116.551 124.948 119.498 121.19C121.737 118.337 123.152 114.64 123.777 109.981C126.344 111.53 128.246 113.568 129.296 116.019C131.083 120.184 131.187 127.028 125.602 132.608C120.709 137.496 114.827 139.611 105.938 139.677C96.0779 139.603 88.6207 136.441 83.7723 130.278C79.2321 124.506 76.8857 116.17 76.7982 105.5C76.8857 94.8301 79.2321 86.4937 83.7723 80.7222C88.6207 74.5587 96.0778 71.3965 105.938 71.3232C115.87 71.3971 123.457 74.5745 128.491 80.7677C130.959 83.8048 132.82 87.6242 134.047 92.0775L141.028 90.2151C139.54 84.7337 137.2 80.0102 134.016 76.0929C127.563 68.1529 118.124 64.0844 105.962 64H105.914C93.777 64.0841 84.4441 68.1681 78.1742 76.1384C72.5949 83.2311 69.7169 93.1 69.6202 105.471L69.6199 105.5L69.6202 105.529C69.7169 117.9 72.5949 127.769 78.1742 134.862C84.4441 142.832 93.777 146.916 105.914 147H105.962C116.753 146.925 124.358 144.1 130.624 137.84C138.822 129.65 138.575 119.385 135.873 113.083C133.934 108.564 130.239 104.893 125.185 102.469ZM106.555 119.985C102.042 120.239 97.3533 118.213 97.1221 113.874C96.9507 110.657 99.4116 107.067 106.832 106.64C107.682 106.591 108.516 106.567 109.335 106.567C112.03 106.567 114.552 106.829 116.844 107.33C115.989 118.008 110.974 119.742 106.555 119.985Z" fill="#BAC2CE"></path></svg></div></a><a href="https://www.linkedin.com/sharing/share-offsite?url=https%3A%2F%2Fwww.turingpost.com%2Fp%2Fcoa-and-co-rag" target="_blank"><div style="max-width:28px;"><svg fill="none" height="100%" viewBox="0 0 211 211" width="100%" xmlns="http://www.w3.org/2000/svg"><circle cx="105.5" cy="105.5" fill-opacity="0.15" fill="#9CA3AF" r="105.5"></circle><path d="M82.1892 75.4698C82.1892 80.1362 78.526 83.8026 73.8638 83.8026C69.2015 83.8026 65.5383 80.1362 65.5383 75.4698C65.5383 70.8034 69.2015 67.137 73.8638 67.137C78.526 67.137 82.1892 70.8034 82.1892 75.4698ZM82.1892 90.4689H65.5383V143.799H82.1892V90.4689ZM108.831 90.4689H92.1797V143.799H108.831V115.801C108.831 100.135 128.812 98.8017 128.812 115.801V143.799H145.463V110.134C145.463 83.8026 115.824 84.8026 108.831 97.8018V90.4689Z" fill="#BAC2CE"></path></svg></div></a></div></div></div><div id="content-blocks"><div style="background-color:transparent;margin:0.0px 0.0px 0.0px 0.0px;padding:0.0px 0.0px 0.0px 0.0px;"><style>
+  p span[style*="font-size"] { line-height: 1.6; }
+</style><div style="padding-bottom:5px;padding-left:45px;padding-right:45px;padding-top:15px;"><p style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;text-align:justify;"><span style="">With the shift to deep, step-by-step reasoning in AI, we continue to observe a trend of creating Chain-of-”…” methods. Previously, we explored </span><span style=""><a class="link" href="https://www.turingpost.com/p/cok" target="_blank" style="-webkit-text-decoration:underline #d92656;color:#d92656;font-weight:bold;text-decoration:underline #d92656;word-break:break-word;;">three Chains-of-Knowledge</a></span><span style=""> and other "chain" spin-offs in </span><span style=""><a class="link" href="https://www.turingpost.com/p/cot" target="_blank" style="-webkit-text-decoration:underline #d92656;color:#d92656;font-weight:bold;text-decoration:underline #d92656;word-break:break-word;;">“From Chain-of-Thoughts to Skeleton-of-Thoughts, and everything in between”</a></span><span style="">, but “chains” keep coming! Today, we’re going to discuss the two advancements from Google Cloud AI Research and Microsoft, called Chain-of-Agents (CoA) and Chain-of-Retrieval Augmented Generation (CoRAG), respectively. They both approach the challenge of handling long-context tasks, but from different perspectives. Google’s CoA employs a multi-agent framework, where worker agents process text segments sequentially in a structured chain, while Microsoft’s CoRAG introduces an iterative retrieval approach as a solution for strong multi-hop reasoning. Understanding techniques like CoA and CoRAG is crucial if you are working toward improving AI's performance in complex reasoning tasks. So, let’s explore how these new ‘chains’ can impact the accuracy and quality of AI models!</span></p></div></div><div style="padding-bottom:45px;padding-left:45px;padding-right:45px;padding-top:45px;text-align:center;width:100%;word-break:break-word;"><a target="_blank" rel="noopener nofollow noreferrer" href="https://huggingface.co/Kseniase?utm_source=www.turingpost.com&amp;utm_medium=referral&amp;utm_campaign=topic-27-what-are-chain-of-agents-and-chain-of-rag"><button style="background-color:#d92656;border-radius:0px;border:solid 0px #32373e;color:#FFFFFF;cursor:pointer;font-family:'Space Grotesk',Helvetica,Arial,sans-serif;font-size:17px;line-height:52px;padding:0px 22px;width:fit-content;" type="button"> Follow us on Hugging Face 🤗 </button></a></div><div style="background-color:transparent;margin:0.0px 0.0px 0.0px 0.0px;padding:0.0px 0.0px 0.0px 0.0px;"><style>
+  p span[style*="font-size"] { line-height: 1.6; }
+</style><div style="padding-bottom:5px;padding-left:45px;padding-right:45px;padding-top:15px;"><p style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;text-align:justify;"><span style=""><b>In today’s episode, we will cover:</b></span></p></div><div style="padding-bottom:15px;padding-left:60px;padding-right:70px;padding-top:5px;"><ul style="color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;list-style-type:circle;margin:0px 0px 0px 25px;padding:0;"><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>Chain-of-Agents from Google: what’s the idea?</i></span></p><ul style="color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;list-style-type:circle;margin-left:25px;padding:0;"><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>How does CoA work?</i></span></p></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>How good CoA actually is?</i></span></p></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>CoA advantages and why it is better than RAG and other methods</i></span></p></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>Not without limitations</i></span></p></li></ul></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>The key idea of Chain-of-RAG (CoRAG) from Microsoft</i></span></p><ul style="color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;list-style-type:circle;margin-left:25px;padding:0;"><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>How does CoRAG work?</i></span></p></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>Performance of CoRAG</i></span></p></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>CoRAG’s advantages</i></span></p></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>Not without limitations</i></span></p></li></ul></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>Conclusion</i></span></p></li><li style="margin:15px 0px 0px 0px;"><p style="text-align:justify;"><span style=""><i>Bonus: Resources to dive deeper</i></span></p></li></ul></div></div><div style="background-color:transparent;margin:0.0px 0.0px 0.0px 0.0px;padding:0.0px 0.0px 0.0px 0.0px;"><div style="padding-bottom:0px;padding-left:45px;padding-right:45px;padding-top:30px;"><h2 style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Space Grotesk',Helvetica,Arial,sans-serif;font-size:27px;font-weight:Bold;line-height:41px;margin:0;text-align:justify;"><span style="">Chain-of-Agents from Google: what’s the idea?</span></h2></div><style>
+  p span[style*="font-size"] { line-height: 1.6; }
+</style><div style="padding-bottom:5px;padding-left:45px;padding-right:45px;padding-top:15px;"><p style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;text-align:justify;"><span style="">Even when you are working with state-of-the-art models, you can notice that tasks with long context, like entire books, long articles, or lengthy conversations, still remain a challenge for LLMs. One of the widespread ideas is to expand the model’s memory, in other words, context window. However, models tend to lose the track of main information as the input grows longer. Another way is to shorten input instead by selecting only the most relevant parts of the text. Here RAG may be used for effective retrieval, but this method may lead to losing important parts of information.</span></p></div><style>
+  p span[style*="font-size"] { line-height: 1.6; }
+</style><div style="padding-bottom:5px;padding-left:45px;padding-right:45px;padding-top:15px;"><p style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;text-align:justify;"><span style="">What to do? Google Cloud AI Research and Penn State University’s researchers pursued another strategy to create a method that would be better than RAG, full-context models, and multi-agent LLMs. They proposed the </span><span style=""><b>Chain-of-Agents (CoA) framework, inspired by how humans process long texts step-by-step</b></span><span style="">. Instead of relying on a single model, CoA enables multiple AI agents to collaborate and process unlimited amounts of text.</span></p></div><style>
+  p span[style*="font-size"] { line-height: 1.6; }
+</style><div style="padding-bottom:5px;padding-left:45px;padding-right:45px;padding-top:15px;"><p style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;text-align:justify;"><span style="">Collaboration among agents may not seem a new concept, but researchers have discovered some tips that make their method stand out. Many methods use tree structure where agents work separately without direct communication (for example, LongAgent). In contrast, </span><span style=""><b>CoA follows a chain structure</b></span><span style=""> with a strong order, at the same time </span><span style=""><b>ensuring agents share information for better accuracy. </b></span><span style="">Let’s look at how CoA exactly does it.</span></p></div><div style="padding-bottom:0px;padding-left:45px;padding-right:45px;padding-top:30px;"><h2 style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Space Grotesk',Helvetica,Arial,sans-serif;font-size:27px;font-weight:Bold;line-height:41px;margin:0;text-align:justify;"><span style="">How does CoA work?</span></h2></div></div><div style="background-color:transparent;margin:0.0px 0.0px 0.0px 0.0px;padding:0.0px 0.0px 0.0px 0.0px;"><style>
+  p span[style*="font-size"] { line-height: 1.6; }
+</style><div style="padding-bottom:5px;padding-left:45px;padding-right:45px;padding-top:15px;"><p style="color:#32373e;color:var(--wt-text-on-background-color) !important;font-family:'Helvetica',Arial,sans-serif;font-size:15px;line-height:23px;text-align:justify;"><span style=""><a class="link" href="https://huggingface.co/blog/Kseniase/coa-and-co-rag?utm_source=www.turingpost.com&amp;utm_medium=referral&amp;utm_campaign=topic-27-what-are-chain-of-agents-and-chain-of-rag" target="_blank" style="-webkit-text-decoration:underline #d92656;color:#d92656;font-weight:bold;text-decoration:underline #d92656;word-break:break-word;;">You can read this article for free on our page on Hugging Face. Follow us there ;)</a></span></p></div></div><div style="background-color:transparent;margin:0.0px 0.0px 0.0px 0.0px;padding:0.0px 0.0px 0.0px 0.0px;"><div style="padding-bottom:30px;padding-left:45px;padding-right:45px;padding-top:30px;"><img alt="" style="margin:0 auto 0 auto;width:100%;" src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/asset/file/21898ec0-09d8-43c8-99aa-4957cd66e4c1/email.Footer.Diamonds.png?t=1732374747"></div></div></div></div></div></div></div></div></div></div></div></div><div class="px-4"></div><div id="comments" class="space-y-8 px-4"><div class="pb-8"><div class="mx-auto max-w-2xl" style="padding-left: 45px; padding-right: 45px;"><div class="flex items-center justify-between gap-4 py-2"><h4 class="leading-none text-wt-text-on-background text-lg sm:text-xl font-bold">Reply</h4><div class=""><div class="relative inline-block text-left" data-headlessui-state=""><div><button class="inline-flex w-full justify-center whitespace-nowrap rounded-wt border bg-wt-background px-4 py-1 text-sm font-medium text-wt-text-on-background" id="headlessui-menu-button-:rf:" type="button" aria-haspopup="menu" aria-expanded="false" data-headlessui-state="">Newest first<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" data-slot="icon" class="-mr-1 ml-2 h-5 w-5 text-wt-text-on-background"><path fill-rule="evenodd" d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd"></path></svg></button></div></div></div></div><div class="pb-4"><div class="relative"><div class="absolute right-2 top-1 z-20"><div class="space-y-2 text-sm"><div class="relative inline-block"><div><svg width="22" height="11" viewBox="0 0 22 11" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M20.414 11H1.58597C1.37769 11 1.17146 10.9667 0.979043 10.9019C0.786625 10.8372 0.611789 10.7423 0.464519 10.6226C0.317248 10.503 0.200427 10.361 0.120724 10.2046C0.0410222 10.0483 0 9.88078 0 9.71158V1.28842C0 1.11922 0.0410222 0.951683 0.120724 0.795365C0.200427 0.639046 0.317248 0.497011 0.464519 0.37737C0.761945 0.135744 1.16534 0 1.58597 0H20.414C20.6223 0 20.8285 0.0333262 21.021 0.0980755C21.2134 0.162825 21.3882 0.257729 21.5355 0.37737C21.6828 0.497011 21.7996 0.639046 21.8793 0.795365C21.959 0.951683 22 1.11922 22 1.28842V9.71009C22.0001 9.87935 21.9592 10.047 21.8795 10.2034C21.7999 10.3598 21.6831 10.5019 21.5358 10.6216C21.3885 10.7413 21.2136 10.8363 21.0212 10.9011C20.8287 10.9659 20.6224 11 20.414 11ZM5.28777 8.42167V5.07028L7.40362 7.21889L9.51854 5.07028V8.42167H11.6344V2.57908H9.51854L7.40362 4.72769L5.28777 2.57908H3.17193V8.42316L5.28777 8.42167ZM19.4625 5.5H17.3466V2.57833H15.2317V5.5H13.1158L16.2887 8.50806L19.4625 5.5Z" fill="#D1D5DB"></path></svg></div></div></div></div><div class="relative overflow-hidden rounded-wt border border-gray-200 pb-10 shadow-sm focus-within:ring-1 focus-within:border-wt-primary focus-within:ring-wt-primary"><label for="comment_583422520_undefined" class="sr-only">Add your comment</label><textarea rows="5" name="content" id="comment_583422520_undefined" class="block w-full resize-none border-0 bg-transparent py-3 !text-sm focus:ring-0" placeholder="Add your comment..." required="" style="height: 124px; overflow-y: hidden;"></textarea><input type="hidden" name="post_id" value="4f3a79da-99e8-4826-8108-649739f224fb"><input type="hidden" name="comment_id" value=""><input type="hidden" name="subscription_id" value="583422520"><input type="hidden" name="user_id" value=""><input hidden="" name="characters_error_message" value="Must be 1000 characters or less"><input hidden="" name="characters_success_message" value=""><input hidden="" name="comment_error_message" value="Oops, something went wrong."><input hidden="" name="comment_success_message" value=""><div class="absolute bottom-2 left-2 flex items-center justify-between pt-2"><p class="flex items-center !text-xs opacity-40 text-wt-text-on-background text-xs sm:text-sm font-medium"><span class="">1000</span></p></div><div class="absolute bottom-2 right-2"><button type="button" class="border font-medium shadow-sm wt-button-font inline-flex items-center disabled:bg-gray-400 disabled:cursor-not-allowed focus:outline-none focus:ring-2 focus:ring-offset-2 justify-center transition-colors rounded-wt px-2 py-1 text-sm border-wt-primary text-wt-text-on-primary bg-wt-primary disabled:border-gray-500 focus:ring-wt-primary">Post</button></div></div></div></div></div></div><div class="mx-auto w-full max-w-2xl pb-8" style="padding-left: 45px; padding-right: 45px;"><h4 class="pb-6 leading-none sm:pb-2 text-wt-text-on-background text-lg sm:text-xl font-bold">Keep reading</h4><div class="space-y-6"><div class="flex flex-col"><a class="group relative flex rounded-wt grid w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50" data-discover="true" href="/p/mod"><div class="z-10 col-span-1 w-full overflow-hidden rounded-wt border bg-slate-100/50"><figure class="aspect-social relative h-full overflow-hidden w-full"><img loading="lazy" width="800" height="421" src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/3f911f3a-8590-4de9-9759-7560280d45c1/MoD.png" alt="Topic 18: What is Mixture-of-Depths?" class="absolute inset-0 h-full w-full object-cover"></figure></div><div class="z-10 col-span-1 p-4"><h2 class="line-clamp-2 text-wt-text-on-background wt-header-font text-wt-text-on-background text-md font-bold">Topic 18: What is Mixture-of-Depths?</h2><p class="font-regular mb-2 text-wt-text-on-background opacity-75 wt-header-font line-clamp-4 text-wt-text-on-background text-sm font-regular">Explore how transformers can select different depths of processing and reduce compute needs</p><p class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"><span></span><time datetime="2024-11-13T22:00:00.000Z"></time></p></div></a><a class="group relative flex rounded-wt grid w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50" data-discover="true" href="/p/hybridrag"><div class="z-10 col-span-1 w-full overflow-hidden rounded-wt border bg-slate-100/50"><figure class="aspect-social relative h-full overflow-hidden w-full"><img loading="lazy" width="800" height="421" src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/ad1af703-4304-4087-a67b-94d2513dcd2d/HybridRAG.png" alt="Topic 12: What is HybridRAG?" class="absolute inset-0 h-full w-full object-cover"></figure></div><div class="z-10 col-span-1 p-4"><h2 class="line-clamp-2 text-wt-text-on-background wt-header-font text-wt-text-on-background text-md font-bold">Topic 12: What is HybridRAG?</h2><p class="font-regular mb-2 text-wt-text-on-background opacity-75 wt-header-font line-clamp-4 text-wt-text-on-background text-sm font-regular">we discuss the innovative combination of VectorRAG and GraphRAG in HybridRAG, its impact on financial document analysis and other areas of implementation, and clarify related terms for better understanding</p><p class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"><span></span><time datetime="2024-09-11T21:00:00.000Z"></time></p></div></a><a class="group relative flex rounded-wt grid w-full grid-cols-1 transition-all hover:bg-opacity-25 sm:my-6 sm:grid-cols-2 flex-row mb-6 gap-y-0 sm:mb-0 hover:bg-slate-100/50" data-discover="true" href="/p/html-multimodal-agentic-rag"><div class="z-10 col-span-1 w-full overflow-hidden rounded-wt border bg-slate-100/50"><figure class="aspect-social relative h-full overflow-hidden w-full"><img loading="lazy" width="800" height="421" src="https://media.beehiiv.com/cdn-cgi/image/format=auto,width=800,height=421,fit=scale-down,onerror=redirect/uploads/asset/file/5e5501bc-d718-4d2f-8905-f11164df541f/RGS.png" alt="Topic 22: What is HtmlRAG, Multimodal RAG and Agentic RAG?" class="absolute inset-0 h-full w-full object-cover"></figure></div><div class="z-10 col-span-1 p-4"><h2 class="line-clamp-2 text-wt-text-on-background wt-header-font text-wt-text-on-background text-md font-bold">Topic 22: What is HtmlRAG, Multimodal RAG and Agentic RAG?</h2><p class="font-regular mb-2 text-wt-text-on-background opacity-75 wt-header-font line-clamp-4 text-wt-text-on-background text-sm font-regular">We explore in details three RAG methods that address limitations of original RAG and meet the upcoming trends of the new year</p><p class="mb-4 text-wt-text-on-background no-underline opacity-75 wt-header-font text-wt-text-on-background text-xs sm:text-sm font-regular"><span></span><time datetime="2025-01-08T22:00:00.000Z"></time></p></div></a></div><button type="button" class="hover flex items-center text-sm text-wt-primary transition-all hover:font-medium"><span>View more</span><svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true" data-slot="icon" class="ml-0.5 h-3 w-3 pt-0.5"><path stroke-linecap="round" stroke-linejoin="round" d="m8.25 4.5 7.5 7.5-7.5 7.5"></path></svg></button></div></div></div></div></main><footer class="px-4 sm:px-6 py-8" style="background-color: rgb(255, 255, 255);"><div class="mx-auto w-full max-w-6xl"><div class="flex flex-col gap-y-6"><div class="grid grid-cols-1 gap-y-6 sm:grid-cols-3"><div class="sm:px-6"><div class="flex w-full flex-col items-center sm:items-start"><div class="flex items-center gap-x-2 py-4"><img src="https://media.beehiiv.com/cdn-cgi/image/fit=scale-down,format=auto,onerror=redirect,quality=80/uploads/publication/logo/c0879691-e34f-4a23-8b4b-b2d9c313d91d/thumb_substack.TP-l.png" alt="Turing Post is here to help you stay on top of AI – connecting the dots between research, key concepts, and the technologies shaping the industry. It’s about knowing what’s out there to build on, understanding the most successful businesses, and making sense of the big ideas driving ML forward. Join 85,000+ professionals from top AI labs, ML startups, and enterprises who rely on Turing Post to stay ahead in this evolving landscape" width="40" height="40" class="overflow-hidden"><p class="text-md font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Turing Post</p></div><div class="text-center sm:text-left"><p class="text-sm font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Turing Post is here to help you stay on top of AI – connecting the dots between research, key concepts, and the technologies shaping the industry. It’s about knowing what’s out there to build on, understanding the most successful businesses, and making sense of the big ideas driving ML forward. Join 85,000+ professionals from top AI labs, ML startups, and enterprises who rely on Turing Post to stay ahead in this evolving landscape</p></div></div></div><div class="mx-auto hidden sm:flex sm:flex-row w-10/12"><div class="flex grow basis-0 flex-col gap-y-3"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Home</p><div class="flex flex-col gap-y-2"><a class="sm:max-w-36 sm:text-wrap" data-discover="true" href="/"><p class="text-xs sm:text-sm font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Posts</p></a><a class="sm:max-w-36 sm:text-wrap" data-discover="true" href="/publications"><p class="text-xs sm:text-sm font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Newsletters</p></a><a class="sm:max-w-36 sm:text-wrap" data-discover="true" href="/authors"><p class="text-xs sm:text-sm font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Authors</p></a></div></div><div class="flex grow basis-0 flex-col gap-y-3"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Account</p><div class="flex flex-col gap-y-2"><a data-discover="true" href="/upgrade"><p class="text-xs sm:text-sm font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Upgrade</p></a><a class="sm:max-w-36 sm:text-wrap" data-discover="true" href="/subscribe/583422520/manage"><p class="text-xs sm:text-sm font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Manage Subscription</p></a><a class="sm:max-w-36 sm:text-wrap" data-discover="true" href="/subscribe/583422520/referrals"><p class="text-xs sm:text-sm font-regular font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">Referrals</p></a></div></div><div class="flex grow basis-0 flex-col gap-y-3"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">ML Series</p><div class="flex flex-col gap-y-2"><a href="https://www.turingpost.com/t/AI-Agents" target="_blank" rel="nofollow noreferrer noopener" class="underline"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">AI Agents and Agentic Workflows</p></a><a href="https://www.turingpost.com/t/AI-101" target="_blank" rel="nofollow noreferrer noopener" class="underline"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">AI 101 – your AI guides</p></a><a href="https://www.turingpost.com/t/The%20History%20of%20LLMs" target="_blank" rel="nofollow noreferrer noopener" class="underline"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">The History of LLMs</p></a><a href="https://www.turingpost.com/t/The-CV-History" target="_blank" rel="nofollow noreferrer noopener" class="underline"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">The CV History</p></a><a href="https://www.turingpost.com/t/FMOps" target="_blank" rel="nofollow noreferrer noopener" class="underline"><p class="text-xs sm:text-sm font-semibold font-ariel" style="color: rgb(34, 34, 34); font-family: &quot;Space Grotesk&quot;, sans-ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, &quot;Segoe UI&quot;, Roboto, &quot;Helvetica Neue&quot;, Arial, &quot;Noto Sans&quot;, sans-serif, &quot;Apple Color Emoji&quot;, &quot;Segoe UI Emoji&quot;, &quot;Segoe UI Symbol&quot;, &quot;Noto Color Emoji&quot;;">FMOps – task-centric ML</p></a></div></div></div><div class="flex flex-col items-center gap-y-4 sm:items-start sm:px-6"><div class="flex w-full flex-col items-center"><form method="post" action="/create" class="group w-full rounded-wt bg-transparent"><input hidden="" name="ref" value=""><input hidden="" name="bhba" value=""><input hidden="" name="visit_token" value="49089091-a970-497d-9ce3-49aa80a19e3e"><input name="redirect_path" type="hidden" value="/upgrade?email="><input name="sent_from_orchid" type="hidden" value="true"><input name="fallback_path" type="hidden" value="/p/coa-and-co-rag"><input name="double_opt" type="hidden" value="false"><input name="trigger_redirect" type="hidden" value="true"><input hidden="" name="subscribe_error_message" value="Oops, something went wrong."><input hidden="" name="subscribe_success_message" value="Subscribed!"><div class="flex flex-col"><div class="flex w-full flex-col items-center sm:flex-row overflow-hidden rounded-lg" style="background-color: rgb(249, 250, 251); border: 2px solid rgb(105, 105, 105);"><div class="flex w-full items-center" style="background-color: rgb(249, 250, 251);"><input type="email" name="email" autocomplete="email" required="" class="wt-button-font z-10 w-full border-none bg-transparent placeholder-shown:text-ellipsis text-lg focus:text-lg active:text-lg sm:text-lg" placeholder="Enter Your Email" style="font-family: &quot;Space Grotesk&quot;; color: rgb(17, 24, 39);"></div><input type="submit" class="cursor-pointer px-5 py-3 font-semibold w-full sm:w-auto text-lg focus:text-lg active:text-lg sm:text-lg rounded-lg rounded-none sm:rounded-lg-r" value="Subscribe" style="background-color: rgb(105, 105, 105); color: rgb(255, 255, 255); font-family: &quot;Space Grotesk&quot;;"></div></div></form></div><div class="flex flex-wrap items-center justify-center gap-2 sm:items-start sm:justify-start"><a target="_blank" rel="noreferrer" href="https://twitter.com/TheTuringPost" aria-label="Twitter" class="relative p-2"><div class="absolute left-0 top-0 h-full w-full rounded-full bg-black opacity-10"></div><div class="rounded-full bg-black p-2 text-white" style="background-color: rgb(34, 34, 34); color: rgb(255, 255, 255);"><svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor"><g><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"></path></g></svg></div></a><a target="_blank" rel="noreferrer" href="https://www.linkedin.com/company/theturingpost/" aria-label="LinkedIn" class="relative p-2"><div class="absolute left-0 top-0 h-full w-full rounded-full bg-black opacity-10"></div><div class="rounded-full bg-black p-2 text-white" style="background-color: rgb(34, 34, 34); color: rgb(255, 255, 255);"><svg class="h-3 w-3" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" fill="currentColor"><path d="M100.28 448H7.4V148.9h92.88zM53.79 108.1C24.09 108.1 0 83.5 0 53.8a53.79 53.79 0 0 1 107.58 0c0 29.7-24.1 54.3-53.79 54.3zM447.9 448h-92.68V302.4c0-34.7-.7-79.2-48.29-79.2-48.29 0-55.69 37.7-55.69 76.7V448h-92.78V148.9h89.08v40.8h1.3c12.4-23.5 42.69-48.3 87.88-48.3 94 0 111.28 61.9 111.28 142.3V448z"></path></svg></div></a><a target="_blank" rel="noreferrer" href="https://rss.beehiiv.com/feeds/UJIoBuf5BX.xml" aria-label="RSS" class="relative p-2"><div class="absolute left-0 top-0 h-full w-full rounded-full bg-black opacity-10"></div><div class="rounded-full bg-black p-2 text-white" style="background-color: rgb(34, 34, 34); color: rgb(255, 255, 255);"><svg xmlns="http://www.w3.org/2000/svg" role="img" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="h-3 w-3" fill="currentColor"><path d="M19.199 24C19.199 13.467 10.533 4.8 0 4.8V0c13.165 0 24 10.835 24 24h-4.801zM3.291 17.415c1.814 0 3.293 1.479 3.293 3.295 0 1.813-1.485 3.29-3.301 3.29C1.47 24 0 22.526 0 20.71s1.475-3.294 3.291-3.295zM15.909 24h-4.665c0-6.169-5.075-11.245-11.244-11.245V8.09c8.727 0 15.909 7.184 15.909 15.91z"></path></svg></div></a></div></div></div><div class="flex w-full flex-col items-center gap-y-4 sm:flex-row sm:justify-between sm:px-6"><div class="w-full text-center sm:w-1/2 sm:text-left"><p class="!text-xs text-md font-light font-ariel" style="color: rgb(34, 34, 34);">© 2025 Ksenia Se.</p></div><div class="flex w-full flex-col items-center gap-y-4 sm:w-1/2 sm:flex-row sm:justify-end sm:gap-x-4"><div class="flex gap-x-2 sm:gap-x-5"><a href="https://beehiiv.com/privacy" target="_blank" class="whitespace-nowrap underline underline-offset-1 hover:opacity-80" rel="noreferrer" style="color: rgb(34, 34, 34);"><p class="!text-xs text-md font-light font-ariel" style="color: rgb(34, 34, 34);">Privacy Policy</p></a><a href="https://beehiiv.com/tou" target="_blank" class="whitespace-nowrap underline underline-offset-1 hover:opacity-80" rel="noreferrer" style="color: rgb(34, 34, 34);"><p class="!text-xs text-md font-light font-ariel" style="color: rgb(34, 34, 34);">Terms of Use</p></a></div><div class="w-fit"><span class="text-gray-700 text-md font-regular"><a target="_blank" rel="noreferrer" href="https://www.beehiiv.com/?utm_source=Turing Post&amp;utm_medium=footer" class="extra-light flex items-center rounded border border-gray-300 bg-white px-3 py-2 text-xs"><svg xmlns="http://www.w3.org/2000/svg" fill="none" class="mr-2 h-4 w-4" viewBox="0 0 30 30"><path fill="#0B0D2A" d="M25.692 13.168H3.866c-.556 0-1.01-.458-1.01-1.017V10.6c0-1.755 1.414-3.178 3.157-3.178H23.52c1.743 0 3.157 1.423 3.157 3.177v1.55a.98.98 0 0 1-.985 1.018ZM21.092 5.745H8.462a1.044 1.044 0 0 1-1.036-1.042C7.426 2.11 9.523 0 12.099 0h5.356c2.576 0 4.673 2.11 4.673 4.703 0 .584-.455 1.042-1.036 1.042ZM26.702 14.845H2.855C1.288 14.845 0 16.142 0 17.718c0 1.576 1.288 2.872 2.855 2.872h8.462c.303-1.627 1.718-2.872 3.436-2.872a3.532 3.532 0 0 1 3.46 2.872h8.463c1.567 0 2.855-1.296 2.855-2.872 0-1.576-1.263-2.873-2.83-2.873ZM25.663 22.268h-7.401v5.745h5.557c1.567 0 2.855-1.297 2.855-2.873v-1.83a1.006 1.006 0 0 0-1.01-1.042ZM3.864 22.268c-.556 0-1.036.457-1.036 1.042v1.83c0 1.576 1.288 2.873 2.855 2.873h5.557v-5.745H3.864Z"></path></svg><span class="text-gray-700 text-md font-regular">Powered by beehiiv</span></a></span></div></div></div></div></div></footer></div></div><script>((c,d)=>{if(!window.history.state||!window.history.state.key){let u=Math.random().toString(32).slice(2);window.history.replaceState({key:u},"")}try{let x=JSON.parse(sessionStorage.getItem(c)||"{}")[d||window.history.state.key];typeof x=="number"&&window.scrollTo(0,x)}catch(u){console.error(u),sessionStorage.removeItem(c)}})("positions", null)</script><script src="https://platform.twitter.com/widgets.js"></script><script src="https://embed.bsky.app/static/embed.js"></script><script type="text/javascript" id="ttEmbedLibScript" src="https://sf16-website-login.neutral.ttwstatic.com/obj/tiktok_web_login_static/tiktok/falcon/embed/embed_lib_v1.0.13.js"></script></body></html>
