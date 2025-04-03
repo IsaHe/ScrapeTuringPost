@@ -1,6 +1,5 @@
 import nodriver as uc
 from time import sleep
-import docController
 
 import os
 import pickle
