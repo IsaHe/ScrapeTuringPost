@@ -9,23 +9,20 @@ from googleapiclient.discovery import build
 from googleapiclient.http import MediaFileUpload
 
 SCOPES = ['https://www.googleapis.com/auth/drive']
-CREDENTIALS_FILE = 'credentials.json'  # Reemplaza con la ruta a tu archivo credentials.json
+CREDENTIALS_FILE = 'credentials.json'  
 TOKEN_PICKLE = 'token.pickle'
 
 def get_credentials():
     creds = None
-    # Comprobar si ya existe un token de acceso guardado.
     if os.path.exists(TOKEN_PICKLE):
         with open(TOKEN_PICKLE, 'rb') as token:
             creds = pickle.load(token)
-    # Si no hay credenciales válidas, inicia el flujo de OAuth.
     if not creds or not creds.valid:
         if creds and creds.expired and creds.refresh_token:
             creds.refresh(Request())
         else:
             flow = InstalledAppFlow.from_client_secrets_file(CREDENTIALS_FILE, SCOPES)
             creds = flow.run_local_server(port=0)
-        # Guarda las credenciales para usos futuros.
         with open(TOKEN_PICKLE, 'wb') as token:
             pickle.dump(creds, token)
     return creds
@@ -64,6 +61,4 @@ async def main():
     sleep(8.5)
 
 if __name__ == '__main__':
-
-    # since asyncio.run never worked (for me)
     uc.loop().run_until_complete(main())
